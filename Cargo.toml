@@ -1,0 +1,13 @@
+[package]
+name = "rocket_test"
+version = "0.1.0"
+authors = ["Techseeker-404 <anandml4u@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket="0.4.7"
+rocket_contrib="0.4.7"
+serde="1.0.123"
+serde_json = "1.0.62"
