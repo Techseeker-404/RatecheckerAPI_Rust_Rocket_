@@ -46,6 +46,10 @@ fn rate_findernew(mut rate_num:f64) -> JsonValue {
 //main section to check on our API: 
 
 fn main() {
-    rocket::ignite().mount("/",routes![hello,add,rate_finder,rate_findernew]).launch();
+    
+    rocket::ignite()
+	.mount("/",routes![hello,add,rate_finder,rate_findernew])
+	.launch();
+    
 }
 
