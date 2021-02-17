@@ -10,7 +10,12 @@ mod rate;
 //Test intro page:
 #[get("/")]
 fn hello() -> String {
-    let mut str = String::from("\u{1F41D}ShopeeBee "); 
+    let hex_str: &str = "53686f706565426565";
+    let str_set = hex::decode(&hex_str) //"53686f706565426565");
+                     .unwrap();
+    let set_check = std::str::from_utf8(&str_set)
+	             .unwrap();
+    let mut str = String::from("\u{1F41D} ".to_owned() + &set_check); 
     //str.push('\u{1F41D}');
     str = str + "\nEnter http://localhost:8000/rate/any value 
           eg: 100 or 3000..etc for its respective rates";
